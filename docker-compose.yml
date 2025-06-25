@@ -1,0 +1,16 @@
+version: "3"
+services:
+    simplecontact:
+        container_name: simplecontact
+        image: jackbailey/simplecontact
+        ports:
+            - 3000:3000
+        environment:
+            - EMAIL_HOST=
+            - EMAIL_USERNAME=
+            - EMAIL_SENDER=
+            - EMAIL_PASSWORD=
+            - EMAIL_PORT=
+            - EMAIL_SSL=
+        volumes:
+            - ./config.json:/app/config.json
